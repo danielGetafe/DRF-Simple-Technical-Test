@@ -1,5 +1,5 @@
 """
-WSGI config for joinup project.
+WSGI config for DRF Simple Technical Testproject project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

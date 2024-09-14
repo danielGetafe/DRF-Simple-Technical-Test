@@ -1,4 +1,4 @@
-# joinup
+# Django REST Framework simple technical test
 
 ## Getting Started
 
@@ -10,31 +10,26 @@
 
 1. Clone the repository
 ```bash
-git clone https://github.com/daniel-code/joinup.git
+git clone git@github.com:danielGetafe/DRF-Simple-Technical.git
 ```
 
-2. Navigate to the project directory
-```bash
-cd joinup
-```
-
-3. Create a virtual environment
+2. Create a virtual environment
 ```bash
 python -m venv venv
 ```
 
-4. Install the dependencies
+3. Install the dependencies
 ```bash
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-5. Run migrations
+4. Run migrations
 ```bash
 python manage.py migrate
 ```
 
-6. Run the server
+5. Run the server
 ```bash
 python manage.py runserver
 ```
