@@ -1,0 +1,12 @@
+# Django
+django==5.1.1  # https://github.com/django/django
+djangorestframework==3.15.2  # https://github.com/encode/django-rest-framework
+django-environ==0.11.2  # https://github.com/joke2k/django-environ
+
+# Testing
+pytest==8.3.2  # https://github.com/pytest-dev/pytest
+pytest-django==4.9.0  # https://github.com/pytest-dev/pytest-django
+ipdb==0.13.13  # https://github.com/gotcha/ipdb
+
+# Quality
+pre-commit==3.8.0  # https://github.com/pre-commit/pre-commit
