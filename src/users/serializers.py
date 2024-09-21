@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
+from src.users.tasks import task_validate_account
 from src.users.models import User
-from src.users.services import send_email_validate_user, send_sms_validate_user
 from django.conf import settings
 
 
@@ -23,6 +23,9 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         created_user = super().create(validated_data)
         if settings.SEND_VALIDATE_EMAIL_AND_SMS:
-            send_email_validate_user(created_user.email, created_user.first_name)
-            send_sms_validate_user(created_user.phone_number, created_user.first_name)
+            task_validate_account.delay(
+                email_address=created_user.email,
+                first_name=created_user.first_name,
+                phone_number=created_user.phone_number,
+            )
         return created_user

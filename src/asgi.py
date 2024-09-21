@@ -1,5 +1,5 @@
 """
-ASGI config for joinup project.
+ASGI config for DRF Simple Technical Testproject.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

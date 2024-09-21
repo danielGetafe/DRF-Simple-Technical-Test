@@ -11,4 +11,5 @@ def send_email_validate_user(email_address: str, first_name: str) -> None:
 
 
 def send_sms_validate_user(phone_number: str, first_name: str) -> None:
+    # TODO: Integrate third party SMS sender service
     pass

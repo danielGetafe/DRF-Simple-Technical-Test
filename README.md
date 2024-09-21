@@ -29,8 +29,19 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-5. Run the server
+5. Install redis (optional)
 ```bash
+sudo apt-get install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
+```
+
+6. Run the server
+```bash
+redis-server
 python manage.py runserver
 ```
 
@@ -60,3 +71,10 @@ curl --location 'http://127.0.0.1:8000/api/users/register' \
 ```bash
 curl --location 'http://127.0.0.1:8000/api/users/1'
 ```
+
+
+## Next Steps...
+1. Create github workflow to run tests when PR is created or updated...
+2. Use different docker containers for drf, redis and postgres...
+3. Inlcude more unit and integration tests...
+4. Include implementation for SMS service...

@@ -10,3 +10,7 @@ ipdb==0.13.13  # https://github.com/gotcha/ipdb
 
 # Quality
 pre-commit==3.8.0  # https://github.com/pre-commit/pre-commit
+
+# Celery
+celery==5.4.0  # https://github.com/celery/celery
+redis==5.0.8  # https://github.com/redis/redis-py
