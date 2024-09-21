@@ -1,5 +1,26 @@
 # Django REST Framework simple technical test
 
+## Context
+In our company, we have a highly available (24/7) and high-performance (1500 - 2500 requests per minute) backend, so it is very important for us that requests to our backend are processed quickly to ensure it can handle them all. To achieve this, we focus on optimizing database queries, as they are typically the bottleneck for a server with these characteristic.
+
+## Objective
+Create a REST API using the following technologies: Python, Django, and Django Rest Framework. This API will initially consist of two endpoints: one for registration and another to access the user profile.
+
+For the registration endpoint, the data will include: first name, last name, email, phone number, and a field where the user can write their hobbies. The registration endpoint will send an email and an SMS confirmation to validate both the email and the phone number.
+
+Imagine you realize that both the email system and the SMS provider you have contracted are very slow, and since it is essential that all endpoints be fast: implement a solution so that both the email and SMS are sent asynchronously.
+
+Both the email and SMS systems require a different configuration for the production environment than for the development/pre-production environment. In the latter, no actual emails or SMS will be sent.
+
+It is not necessary to provide a real configuration for production, nor for sending emails or SMS. It can be left indicated, but it must be clear which configuration is for each environment, and that only in production, if a real configuration is set, both the email and SMS will be sent.
+
+Additionally, implement an endpoint to retrieve the user profile. The data returned will be the same as the registration endpoint, plus two extra fields: validated email and validated phone number.
+
+Create the test in a Git repository (GitHub or Bitbucket), either public or private. If it is private, you will need to share access with us.
+
+Create a first version (tag 1.0.0) where both the email and SMS are sent synchronously, and another version (tag 1.1.0) where both the email and SMS are sent asynchronously.
+
+
 ## Getting Started
 
 ### Prerequisites
